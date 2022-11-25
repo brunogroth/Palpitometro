@@ -7,4 +7,7 @@ export interface Jogo {
   criadoEm?: string;
   placar?: number;
   placarB?: number;
+  selecaoAId:number;
+  selecaoBId:number;
+
 }

@@ -19,11 +19,11 @@ namespace api.Controllers
         [Route("cadastrar")]
         public IActionResult Cadastrar([FromBody] Jogo jogo)
         {
-            jogo.SelecaoA = _context.Selecoes.Find(jogo.SelecaoA.Id);
-            jogo.SelecaoB = _context.Selecoes.Find(jogo.SelecaoB.Id);
+
             _context.Jogos.Add(jogo);
             _context.SaveChanges();
-            return Created("", jogo);
+
+            return Ok(jogo);
         }
 
         [HttpGet]
@@ -32,7 +32,6 @@ namespace api.Controllers
         {
             List<Jogo> jogos = _context.Jogos.Include(x => x.SelecaoA).Include(x => x.SelecaoB).ToList();
             return jogos.Count != 0 ? Ok(jogos) : NotFound();
-//            return Ok(jogos);
         }
     }
 }

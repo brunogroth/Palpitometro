@@ -17,6 +17,7 @@ export class ListarJogoComponent implements OnInit {
     .subscribe({
       next: (jogos) => {
         this.jogos = jogos;
+        console.log(jogos)
       }
     });
   }

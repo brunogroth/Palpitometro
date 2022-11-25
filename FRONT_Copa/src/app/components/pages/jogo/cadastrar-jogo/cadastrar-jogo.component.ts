@@ -14,6 +14,7 @@ export class CadastrarJogoComponent implements OnInit {
   selecoes!: Selecao[];
   
   selecaoAId!: number;
+  selecaoBId!: number; 
   selecaoA?: Selecao;
   selecaoB?: Selecao;
   placar?: number;
@@ -36,27 +37,22 @@ export class CadastrarJogoComponent implements OnInit {
 
   // CADASTRAR ----------------------- 
   cadastrar(): void {
-    let selecao : Selecao ={
-      id : this.selecaoAId,
-      nome : ""
-    }
+
     
     let jogo : Jogo = {
-      selecaoA : selecao,
-      selecaoB : this.selecaoB,
-      placar : 0,
-      placarB : 0,     
+      selecaoAId : this.selecaoAId,
+      selecaoBId : this.selecaoBId,
       
     };
     console.log(jogo);
 
-    // this.http.post<Jogo>("https://localhost:5001/api/jogo/cadastrar", jogo)
-    // .subscribe({
-    //   //Caso a requisição for bem sucedida cai no next
-    //   next: (jogo) => {
-    //     this.router.navigate(["pages/jogo/listar"]);
-    //   },
-    //   //Caso dê erro
-    // });
+    this.http.post<Jogo>("https://localhost:5001/api/jogo/cadastrar", jogo)
+    .subscribe({
+      //Caso a requisição for bem sucedida cai no next
+      next: (jogo) => {
+        this.router.navigate(["pages/jogo/listar"]);
+      },
+
+    });
   }
 }
