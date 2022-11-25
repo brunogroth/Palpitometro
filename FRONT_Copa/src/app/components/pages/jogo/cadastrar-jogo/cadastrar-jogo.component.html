@@ -5,8 +5,8 @@
   <mat-card-content>
     <label>Seleção A</label>
     <div>
-      <select  [(ngModel)]="selecaoA">
-        <option *ngFor="let selecao of selecoes" [value]="selecao">{{selecao.nome}}</option>
+      <select  [(ngModel)]="selecaoAId">
+        <option *ngFor="let selecao of selecoes" [value]="selecao.id">{{selecao.nome}}</option>
       </select>
     </div>
 
