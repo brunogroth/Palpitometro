@@ -1,6 +1,7 @@
 # Palpitometro 
-Um simples Palpitômetro da Copa do Mundo de 2022. Rest API C#, Banco SQLite e frontend em Angular
-A simple Guessing application for 🌐 2022 FIFA World Cup. Register teams, Matches and your guesses for each game. C# Rest API, SQLite Database and Angular Frontend.
+PT-BR: Um simples Palpitômetro da Copa do Mundo de 2022. Rest API C#, Banco SQLite e frontend em Angular.
+
+EN: A simple Guessing application for 🌐 2022 FIFA World Cup. Register teams, Matches and your guesses for each game. C# Rest API, SQLite Database and Angular Frontend.
 
 ## Built With
 
