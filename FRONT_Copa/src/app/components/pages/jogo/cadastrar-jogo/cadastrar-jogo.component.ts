@@ -36,9 +36,7 @@ export class CadastrarJogoComponent implements OnInit {
   }
 
   // CADASTRAR ----------------------- 
-  cadastrar(): void {
-
-    
+  cadastrar(): void {   
     let jogo : Jogo = {
       selecaoAId : this.selecaoAId,
       selecaoBId : this.selecaoBId,

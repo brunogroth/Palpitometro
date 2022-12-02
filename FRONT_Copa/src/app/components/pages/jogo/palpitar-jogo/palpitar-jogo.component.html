@@ -2,5 +2,19 @@
   <mat-card-header>
     <mat-card-title> Palpitar Jogo </mat-card-title>
   </mat-card-header>
-  <mat-card-content> </mat-card-content>
+  <mat-card-content>
+    <label>Seleção A</label>
+    <div>
+      <p>{{selecaoAId}}</p>
+    </div>
+
+    <label>Seleção B</label>
+    <div>
+      <p>{{selecaoBId}}</p>
+    </div>
+
+    <button id="btnCadastrar" (click)="palpitar()" style="margin-top: 1rem; padding:0rem 5rem">Palpitar</button	>
+
+  </mat-card-content>
+
 </mat-card>

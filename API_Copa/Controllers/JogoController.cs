@@ -33,5 +33,14 @@ namespace api.Controllers
             List<Jogo> jogos = _context.Jogos.Include(x => x.SelecaoA).Include(x => x.SelecaoB).ToList();
             return jogos.Count != 0 ? Ok(jogos) : NotFound();
         }
+        
+        [HttpPost]
+        [Route("palpitar")]
+        public IActionResult Palpitar([FromBody] Jogo jogo){
+            _context.Jogos.Update(jogo);
+            _context.SaveChanges();
+
+            return Ok(jogo);
+        }
     }
 }

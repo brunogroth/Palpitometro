@@ -22,6 +22,10 @@ const routes: Routes = [
     path: "pages/jogo/listar",
     component: ListarJogoComponent,
   },
+  {
+    path: "pages/palpite/cadastrar",
+    component: PalpitarJogoComponent,
+  },
 ];
 
 @NgModule({
